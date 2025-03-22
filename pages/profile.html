@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <title>Arcosocial | Профиль</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../assets/images/logo.svg">
+        <h2>Личный кабинет</h2>
+        <button class="logout" onclick="logout()">Выйти</button>
+    </header>
+    <nav class="navbar">
+        <a href="./messenger.html" class="nav-item">Чаты</a>
+        <a href="./posts.html" class="nav-item">Посты</a>
+        <a href="./profile.html" class="nav-item">Профиль</a>
+        <a href="./about.html" class="nav-item">О нас</a>
+    </nav>
+    <div class="profile-container">
+        <div class="profile-info">
+            <div class="avatar" onclick="document.getElementById('avatarInput').click()">
+                <img class="icon" src="../assets/images/AlucardOkButWhy.webp">
+                <input type="file" id="avatarInput" class="avatar-input" accept="image/*">
+            </div>
+            <form class="edit-form" id="profileForm">
+                <div class="input-group">
+                    <input type="text" id="firstName" placeholder="Фамилия*" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="lastName" placeholder="Имя*" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="middleName" placeholder="Отчество">
+                </div>
+                <button type="button" class="save-btn" onclick="saveProfile()">Сохранить изменения</button>
+            </form>
+        </div>
+        <h3>Мои публикации</h3>
+        <h4>Либо вы ещё ничего не публиковали, либо мы не смогли их отобразить. В любом случае, это можно исправить! Наверное...</h4>
+        <div class="settings-section">
+            <h3>Настройки</h3>
+            <div class="setting-item">
+                <label>Уровень приватности:</label>
+                <select id="privacyLevel" class="settings-select">
+                    <option value="public">Публичный</option>
+                    <option value="friends">Только друзья</option>
+                    <option value="private">Приватный</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label>Цветовая тема:</label>
+                <div class="theme-switcher">
+                    <button onclick="changeTheme('default')">По умолчанию</button>
+                    <button onclick="changeTheme('dark')">Тёмная</button>
+                    <button onclick="changeTheme('cyber')">Киберпанк</button>
+                </div>
+            </div>
+            <div class="setting-item">
+                <label>Чёрный список:</label>
+                <div class="blacklist" id="blacklist">
+                    <h4>Пока тут пусто...</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/profile.js"></script>
+</body>
+</html>

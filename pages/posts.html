@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/posts.css">
+    <title>Arcosocial | Посты</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="../assets/images/logo.svg">
+        <h2>Посты</h2>
+        <button class="logout" onclick="logout()">Выйти</button>
+    </header>
+    <nav class="navbar">
+        <a href="./messenger.html" class="nav-item">Чаты</a>
+        <a href="./posts.html" class="nav-item">Посты</a>
+        <a href="./profile.html" class="nav-item">Профиль</a>
+        <a href="./about.html" class="nav-item">О нас</a>
+    </nav>
+    <div class="posts-container">
+        <h1 style="margin-bottom: 2rem;">Последние публикации</h1>
+        <div class="post-card">
+            <div class="post-image">
+                <img class="post-image" src="../assets/images/arcaea8.jpg">
+            </div>
+            <div class="post-content">
+                <h2 class="post-title">8 годовщина в Arcaea!</h2>
+                <p class="post-excerpt" id="excerpt1">Коллаб с Undertale, 7 новых песен, возвращение партнера, скидки и... Плюши?</p>
+                <div class="fulltext1">
+                    <p>9 марта игре Arcaea исполнилось 8 лет! «Это число силы: бесконечной и нескончаемой.»</p>
+                    <br>
+                    <img class="post-image" src="../assets/images/arcaeaxundertale.jpg">
+                    <br>
+                    <p>В честь годовщины вышел лимитированный коллаборационный пак с Undertale, куда вошли такие песни как «Death by Glamour», «Your Best Nightmare» и «MEGALOVANIA».</p>
+                    <br>
+                    <img class="post-image" src="../assets/images/arcaeaxundertale1.jpg">
+                    <br>
+                    <p>Также в Memory Archive добавили ремикс к MEGALOVANIA от Camellia.</p>
+                    <br>
+                    <img class="post-image" src="../assets/images/megalovaniacamellia.jpg">
+                    <br>
+                    <p>Данный коллаборационный пак и данную песню можно купить только до следующей годовщины: 9 марта 2026 года.</p>
+                    <p>Странное решение, но ладно.</p>
+                    <br>
+                    <img class="post-image" src="../assets/images/newarts.jpg">
+                    <br>
+                    <p>Позже были внезапно анонсированы новые арты для Хикари и Тайрицу. Старые арты остались в игре. Для их переключения добавили специальную кнопку.</p>
+                    <br>
+                    <img class="post-image" src="../assets/images/nami.jpg">
+                    <br>
+                    <p>Было анонсировано возвращение лимитированного партнёра Nami (Twilight)! Забрать её можно с 9 по 30 марта, купив её сигнатурную песню.</p>
+                    <br>
+                    <img class="post-image" src="../assets/images/plushes.jpg">
+                    <br>
+                    <p>Думали, плюши были кликбейтом? Нет! Разработчики в честь 8 годовщины решили выпустить официальные плюши с Тайрицу (Grievous Lady) и Тайрицу (Fracture). Дорого, но оно того, наверное, стоит.</p>
+                    <br>
+                    <img class="post-image" src="../assets/images/sales1.jpg">
+                    <br>
+                    <img class="post-image" src="../assets/images/sales2.jpg">
+                    <br>
+                    <p>И конечно же никто не забывал про скидки! Расписывать тут что-то смысла нет, скидки стандартные.</p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn" onclick="toggleFullText1()">Читать далее</button>
+                    <button class="action-btn" id="open1" onclick="toggleLike(1)">
+                        <span id="likeCount1">7</span> ♥
+                    </button>
+                </div>
+                <div class="comments-section">
+                    <h3>Комментарии</h3>
+                    <div id="commentsContainer"></div>
+                    <textarea post="1" placeholder="Ваш комментарий..."></textarea>
+                    <br>
+                    <button class="action-btn" onclick="postComment(1)">Отправить</button>
+                </div>
+            </div>
+        </div>
+        <div class="post-card">
+            <div class="post-image">
+                <img class="post-image" src="../assets/images/sevenlives.png">
+            </div>
+            <div class="post-content">
+                <h2 class="post-title">Новый избранный исполнитель: SEVEN LIVES</h2>
+                <p class="post-excerpt" id="excerpt2">Вы никогда не слышали полноценную музыку, если не слышали SEVEN LIVES.</p>
+                <div class="fulltext2">
+                    <p>Родом из Канады, SEVEN LIVES с подросткового возраста увлекается написанием музыки, сразу склонившись к мультижанровым (также известным как full flavour) трекам для ритм-игр.</p>
+                    <p>В список попало 16 треков, которые уже готовы занять ваше время в ближайший год маппинга. И конечно же, все треки уже подготовлены для маппинга в формате .osz!</p>
+                    <p>Благодаря вдохновению от Caravan Palace, onumi, MUST DIE!, MARETU, Kikuo, Camellia, t+pazolite и многими другими композиторами, мы можем гарантировать, что вы сможете найти первоклассную музыку.</p>
+                    <p>Убедиться сами вы сможете тут: <a target="_blank" href="https://osu.ppy.sh/home/news/2025-03-09-new-featured-artist-seven-lives">https://osu.ppy.sh/home/news/2025-03-09-new-featured-artist-seven-lives</a></p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn" id="open2" onclick="toggleFullText2()">Читать далее</button>
+                    <button class="action-btn" onclick="toggleLike(2)">
+                        <span id="likeCount2">5</span> ♥
+                    </button>
+                </div>
+                <div class="comments-section">
+                    <h3>Комментарии</h3>
+                    <div id="commentsContainer">
+                        <p style="margin-top: 1rem; margin-bottom: 1rem;">о, круто, как раз искал что можно почартить</p>
+                    </div>
+                    <textarea post="2" placeholder="Ваш комментарий..."></textarea>
+                    <br>
+                    <button class="action-btn" onclick="postComment(2)">Отправить</button>
+                </div>
+            </div>
+        </div>
+        <div class="post-card">
+            <div class="post-image">
+                <img class="post-image" src="../assets/images/egts.jpg">
+            </div>
+            <div class="post-content">
+                <h2 class="post-title">EGTS 2025 приближается к концу</h2>
+                <p class="post-excerpt" id="excerpt3">Самый интересный турнир по osu!taiko совсем скоро подойдёт к концу, и в финале они решили всех порадовать.</p>
+                <div class="fulltext3">
+                    <p>К финалу было написано множество оригинальных песен и были раскрыты очередные треки из подборки коллабораций.</p>
+                    <br>
+                    <p>Начнём с оригинальных:</p>
+                    <ul>
+                        <li>NM1: ptar124 feat. IA, flower & SEKAI - nymphae silvae</li>
+                        <li>NM2: takehirotei - Quasar Pulse ~Iridescent Ray of Destruction~</li>
+                        <li>NM3: N_dog feat. kyoyama Sail - daybreak</li>
+                        <li>NM4: Spaceport Sound Team (ptar124, KURORAK, Salad Savior, V0iD, Foodbot, Hundotte) - Strive;</li>
+                        <li>HD2: Kry.exe - GEOLOGICAL//IRRESOLUTION</li>
+                        <li>FM3: GTS Orchestra Team (takehirotei, SiLiS, rN, HowToPlayLN) - 破壊の歌踊 (Hakai no Kayou)</li>
+                        <li>Tiebreaker: Footbot, Type R, SDMNE - Justice Rectifier</li>
+                    </ul>
+                    <br>
+                    <p>После этого всего были раскрыты коллаборационные песни:</p>
+                    <ul>
+                        <li>7th Beat Games (A Dance of Fire and Ice): Frums - sing sing red indigo (HD1)</li>
+                        <li>Phigros: Team Grimoire - Rrhar'il (HR1)</li>
+                        <li>vivid\stasis: Kyotsugyon - Happy~Go☆Lucky!!! (HR2)</li>
+                    </ul>
+                    <br>
+                    <p>По итогу у нас остаётся:</p>
+                    <ul>
+                        <li>7th Beat Games - не раскрыта одна песня</li>
+                        <li>Phigros - не раскрыты две песни</li>
+                        <li>vivid\stasis - раскрыты все песни</li>
+                    </ul>
+                    <br>
+                    <p>Но и это ещё не всё! Разработчики Orzmic раскрыли первую часть коллаборации с EGTS, куда попали: </p>
+                    <ul>
+                        <li>DJ Raisei - 墜光の都市より</li>
+                        <li>Sephid - Hypothesize</li>
+                        <li>Camellia - TremENDouS</li>
+                    </ul>
+                    <br>
+                    <p>Гранд-финал будет уже на следующих выходных, готовимся к куче новостей, оригиналов и...</p>
+                </div>
+                <div class="post-actions">
+                    <button class="action-btn" id="open3" onclick="toggleFullText3()">Читать далее</button>
+                    <button class="action-btn" onclick="toggleLike(3)">
+                        <span id="likeCount3">10</span> ♥
+                    </button>
+                </div>
+                <div class="comments-section">
+                    <h3>Комментарии</h3>
+                    <div id="commentsContainer"></div>
+                    <textarea post="3" placeholder="Ваш комментарий..."></textarea>
+                    <br>
+                    <button class="action-btn" onclick="postComment(3)">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/posts.js"></script>
+</body>
+</html>

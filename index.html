@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Arcosocial | Вход</title>
+</head>
+<body>
+<header>
+    <img class="logo" src="./assets/images/logo.svg">
+</header>
+<body>
+    <div class="gradient-bg"></div>
+    <div class="auth-container">
+        <div class="form-switcher">
+            <button class="active" onclick="switchForm('login')">Вход</button>
+            <button onclick="switchForm('register')">Регистрация</button>
+        </div>
+        <form id="loginForm" class="auth-form active">
+            <div class="form-step active" id="step1">
+                <div class="input-group">
+                    <input type="text" id="login" placeholder="Логин или email" required>
+                </div>
+                <button class="btn" onclick="showPasswordStep()">Войти</button>
+            </div>
+            <div class="form-step" id="step2">
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Пароль" required>
+                </div>
+                <button class="btn" onclick="handleLogin(event)">Продолжить</button>
+            </div>
+        </form>
+        <form id="registerForm" class="auth-form">
+            <div class="input-group">
+                <input type="email" id="regEmail" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="regPassword" placeholder="Пароль" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="regConfirm" placeholder="Подтвердите пароль" required>
+            </div>
+            <button class="btn" onclick="handleRegister(event)">
+                <span class="btn-text">Создать аккаунт</span>
+                <div class="loader"></div>
+            </button>
+        </form>
+        <div class="links">
+            <a href="./assets/documents/rules.txt">Правила использования</a>
+            <a href="./assets/documents/eula.txt">Пользовательское соглашение</a>
+        </div>
+    </div>
+    <script src="./scripts/reg.js"></script>
+</body>
+</body>
+</html>

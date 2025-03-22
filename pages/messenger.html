@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/messenger.css">
+    <title>Arcosocial | Чаты</title>
+</head>
+<body>
+    <header>
+        <button class="back-btn-mobile" id="backBtnmobile" onclick="closeChat()">←</button>
+        <img class="logo" src="../assets/images/logo.svg">
+        <h2>Мессенджер</h2>
+        <button class="logout" onclick="logout()">Выйти</button>
+    </header>
+    <div class="header">
+        <div class="header-buttons">
+            <button class="back-btn" id="backBtn" onclick="closeChat()">←</button>
+            <button class="icon-btn" onclick="startVideoCall()">🎥 Видеозвонок</button>
+            <button class="icon-btn" onclick="startGroupCall()">👥 Групповой звонок</button>
+        </div>
+    </div>
+    <nav class="navbar">
+        <a href="./messenger.html" class="nav-item">Чаты</a>
+        <a href="./posts.html" class="nav-item">Посты</a>
+        <a href="./profile.html" class="nav-item">Профиль</a>
+        <a href="./about.html" class="nav-item">О нас</a>
+    </nav>
+    <div class="messenger-container">
+        <div class="chat-list" id="chatList">
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="messages-container" id="messagesContainer"></div>
+
+            <form class="message-form" onsubmit="sendMessage(event)">
+                <input type="text" class="message-input" placeholder="Напишите сообщение..." id="messageInput">
+                <button type="submit" class="icon-btn">✉️</button>
+            </form>
+        </div>
+    </div>
+    <script src="../scripts/messenger.js"></script>
+</body>
+</html>
