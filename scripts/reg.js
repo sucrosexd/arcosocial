@@ -44,6 +44,12 @@ function showPasswordStep() {
         document.getElementById('step2').classList.add('active');
     }
 }
+function back() {
+    if (login) {
+        document.getElementById('step1').classList.add('active');
+        document.getElementById('step2').classList.remove('active');
+    }
+}
 function toggleLoader(show) {
     document.querySelectorAll('.loader').forEach(l => l.style.display = show ? 'block' : 'none');
     document.querySelectorAll('.btn-text').forEach(t => t.style.display = show ? 'none' : 'block');
