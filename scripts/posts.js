@@ -33,10 +33,10 @@ function toggleLike(postId) {
     localStorage.setItem(`post_${postId}_likes`, posts[postId].likes);
 }
 function postComment(postId) {
-    const comment = document.querySelectorAll('textarea').value;
+    const comment = document.querySelector('textarea').value;
     if(comment) {
         posts[postId].comments.push(comment);
-        document.querySelectorAll('textarea').value = '';
+        document.querySelector('textarea').value = '';
         updateComments(postId);
         console.log("да")
     }
