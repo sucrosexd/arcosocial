@@ -38,7 +38,6 @@ function postComment(postId) {
         posts[postId].comments.push(comment);
         document.querySelector('textarea').value = '';
         updateComments(postId);
-        console.log("да")
     }
 }
 function updateComments(postId) {
