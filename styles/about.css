@@ -57,7 +57,7 @@ h2 {
     margin-bottom: 1rem;
 }
 .about-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
@@ -138,5 +138,10 @@ textarea:hover {
     }
     .section {
         padding: 1.5rem;
+    }
+}
+@media (min-width: 1600px) {
+    .about.container {
+        max-width: 1200px;
     }
 }
