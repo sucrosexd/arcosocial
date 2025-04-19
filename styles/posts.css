@@ -51,7 +51,7 @@ header {
 }
 .posts-container {
     padding: 1rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 3rem;
 }
@@ -146,5 +146,10 @@ header {
     }
     .post-card {
         padding: 2rem;
+    }
+}
+@media (min-width: 1600px) {
+    .posts.container {
+        max-width: 1200px;
     }
 }
